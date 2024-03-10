@@ -20,36 +20,36 @@ function App() {
   return (
     <MyState>
       <Router>
-      <Routes>
-      <Route path="/" element={<Home />} />
-          <Route path="/order" element={
-            <ProtectedRoute>
-              <Order />
-            </ProtectedRoute>
-          } />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/dashboard" element={
-            <ProtectedRouteForAdmin>
-              <Dashboard />
-            </ProtectedRouteForAdmin>
-          } />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/addproduct" element={
-            <ProtectedRouteForAdmin>
-              <AddProduct />
-            </ProtectedRouteForAdmin>
-          } />
-          <Route path="/updateproduct" element={
-            <ProtectedRouteForAdmin>
-              <UpdateProduct />
-            </ProtectedRouteForAdmin>
-          } />
-          <Route path='/productinfo/:id' element={<ProductInfo/>}/>
-          <Route path="/*" element={<NoPage />} />
-      </Routes>
-      <ToastContainer/>
-    </Router>
+        <Routes>
+        <Route path="/" element={<Home />} />
+            <Route path="/order" element={
+              <ProtectedRoute>
+                <Order />
+              </ProtectedRoute>
+            } />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/dashboard" element={
+              <ProtectedRouteForAdmin>
+                <Dashboard />
+              </ProtectedRouteForAdmin>
+            } />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/addproduct" element={
+              <ProtectedRouteForAdmin>
+                <AddProduct />
+              </ProtectedRouteForAdmin>
+            } />
+            <Route path="/updateproduct" element={
+              <ProtectedRouteForAdmin>
+                <UpdateProduct />
+              </ProtectedRouteForAdmin>
+            } />
+            <Route path='/productinfo/:id' element={<ProductInfo/>}/>
+            <Route path="/*" element={<NoPage />} />
+        </Routes>
+        <ToastContainer/>
+      </Router>
     </MyState>
     
   )
@@ -71,7 +71,7 @@ export const ProtectedRoute = ({children}) => {
 //admin
 const ProtectedRouteForAdmin = ({children}) => {
   const admin = JSON.parse(localStorage.getItem("user"))
-  if(admin.user.email === "vidhiparmar1555@gmail.com"){
+  if(admin.user.email === "vidhiparmar1559@gmail.com"){
     return children
   }else{
     return <Navigate to={'/login'}/>

@@ -1,8 +1,21 @@
-# React + Vite
+# Ecommerce web application
+The eCommerce web application features two distinct user roles: administrators and customers, each with specific functionalities tailored to their roles.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+</br>
+<h3>Admin Dashboard:</h3>
 
-Currently, two official plugins are available:
+    Add Product: Administrators have the capability to add new products to the inventory. This involves specifying details such as product name, description, price, quantity, and other relevant attributes.
+    Update Product: Admins can modify existing product information, including price adjustments, quantity updates, or changes to product descriptions.
+    Delete Product: The ability to remove products from the inventory is a crucial function, enabling administrators to maintain an up-to-date and relevant product catalog.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h3>Customer Interface:</h3>
+
+Browsing Products:
+
+    Product Listings: Customers can browse through the available products, view details, and explore various categories.
+
+Shopping Cart:
+
+    Add to Cart: Customers can add desired products to their shopping cart for later review or to proceed with the purchase.
+
+    Update Cart: The ability to modify the quantity or remove items from the shopping cart provides flexibility for customers.
