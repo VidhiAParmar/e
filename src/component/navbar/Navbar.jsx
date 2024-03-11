@@ -89,13 +89,6 @@ export default function Navbar() {
                       Logout
                     </a>
                   </div> : ""}
-                  <div className="flow-root">
-                    <Link to={'/'} className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer">
-                      <img
-                        className="inline-block w-10 h-10 rounded-full"
-                        src="https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg"
-                        alt="Dan_Abromov" />                                        </Link>
-                  </div>
                 </div>
 
                 <div className="border-t border-gray-200 px-4 py-6">
@@ -106,7 +99,7 @@ export default function Navbar() {
                       className="block h-auto w-5 flex-shrink-0"
                     />
                     <span className="ml-3 block text-base font-medium text-gray-900" style={{ color: mode === 'dark' ? 'white' : '', }}>INDIA</span>
-                    <span className="sr-only">, change currency</span>
+                   
                   </a>
                 </div>
               </Dialog.Panel>
@@ -117,7 +110,7 @@ export default function Navbar() {
 
       {/* desktop  */}
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-pink-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8" style={{ backgroundColor: mode === 'dark' ? 'rgb(62 64 66)' : '', color: mode === 'dark' ? 'white' : '', }}>
+        <p className="flex h-10 items-center justify-center bg-[#f6715c] px-4 text-sm font-medium text-white sm:px-6 lg:px-8" style={{ backgroundColor: mode === 'dark' ? 'rgb(62 64 66)' : '', color: mode === 'dark' ? 'white' : '', }}>
           Get free delivery on orders over ₹300
         </p>
 
@@ -162,9 +155,9 @@ export default function Navbar() {
                 }
                  
 
-                  {user ? <a onClick={logout} className="text-sm font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                  {user ? <Link to={'/login'} className="text-sm font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
                     Logout
-                  </a> : <Link to={'/signup'} className="text-sm font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                  </Link> : <Link to={'/signup'} className="text-sm font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
                     Signup
                   </Link>}
 
@@ -180,14 +173,7 @@ export default function Navbar() {
                     <span className="ml-3 block text-sm font-medium" style={{ color: mode === 'dark' ? 'white' : '', }}>INDIA</span>
                   </a>
                 </div>
-                <div className="hidden lg:ml-8 lg:flex">
-                  <a href="#" className="flex items-center text-gray-700 ">
-                    <img
-                      className="inline-block w-10 h-10 rounded-full"
-                      src="https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg"
-                      alt="Dan_Abromov" />
-                  </a>
-                </div>
+               
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
